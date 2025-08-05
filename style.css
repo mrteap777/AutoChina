@@ -126,3 +126,47 @@ footer {
         padding: 40px 0;
     }
 }
+/* Стили для блока с автомобилями */
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.car-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.car-card h3 {
+    padding: 15px 15px 5px;
+    font-size: 1.2rem;
+    color: var(--dark);
+}
+
+.car-card p {
+    padding: 0 15px 15px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Адаптивность для блока автомобилей */
+@media (max-width: 600px) {
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+}
